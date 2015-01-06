@@ -17,6 +17,9 @@ void __attribute__((weak)) cilk_tool_init(void);
 void __attribute__((weak)) cilk_tool_destroy(void);
 void __attribute__((weak)) cilk_tool_print(void);
 
+void __attribute__((weak)) cilk_tool_c_function_enter(void* rip);
+void __attribute__((weak)) cilk_tool_c_function_leave(void* rip);
+
 void __attribute__((weak)) 
 cilk_enter_begin (__cilkrts_stack_frame* sf, void* rip);
 void __attribute__((weak)) 

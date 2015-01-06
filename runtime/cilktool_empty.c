@@ -1,4 +1,5 @@
 #include "cilktool.h"
+#include "reducertool.h"
 
 #ifdef __cplusplus
 #define EXTERN_C extern "C" {
@@ -30,5 +31,13 @@ void cilk_sync_begin (__cilkrts_stack_frame* sf) { }
 void cilk_sync_end (__cilkrts_stack_frame* sf) { }
 void cilk_leave_begin (__cilkrts_stack_frame *sf) { }
 void cilk_leave_end (void) { }
+
+void cilk_begin_reduce_strand(void) { }
+void cilk_end_reduce_strand(void) { }
+void cilk_begin_update_strand(void) { }
+void cilk_end_update_strand(void) { }
+
+void cilk_set_reducer(void *reducer, void *rip, const char *function, int line) { }
+void cilk_read_reducer(void *reducer, void *rip, const char *function, int line) { }
 
 EXTERN_C_END
